@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">멈춰라 숫자</string>
+    <string name="title_activity_main">멈춰라 숫자</string>
+    <string name="package_name">com.moduseries.number</string>
+    <string name="custom_url_scheme">com.moduseries.number</string>
+</resources>
