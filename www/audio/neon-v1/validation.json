@@ -1,0 +1,128 @@
+[
+  {
+    "file": "chain_complete.wav",
+    "frames": 41280,
+    "peak_pcm": 12139,
+    "passed": true
+  },
+  {
+    "file": "chain_step.wav",
+    "frames": 14400,
+    "peak_pcm": 6879,
+    "passed": true
+  },
+  {
+    "file": "coin_reward.wav",
+    "frames": 21120,
+    "peak_pcm": 5958,
+    "passed": true
+  },
+  {
+    "file": "combo_5.wav",
+    "frames": 27840,
+    "peak_pcm": 8868,
+    "passed": true
+  },
+  {
+    "file": "countdown.wav",
+    "frames": 6240,
+    "peak_pcm": 5736,
+    "passed": true
+  },
+  {
+    "file": "game_over.wav",
+    "frames": 53760,
+    "peak_pcm": 8017,
+    "passed": true
+  },
+  {
+    "file": "game_start.wav",
+    "frames": 24960,
+    "peak_pcm": 8853,
+    "passed": true
+  },
+  {
+    "file": "golden_enter.wav",
+    "frames": 34560,
+    "peak_pcm": 10116,
+    "passed": true
+  },
+  {
+    "file": "hit_good.wav",
+    "frames": 15840,
+    "peak_pcm": 10027,
+    "passed": true
+  },
+  {
+    "file": "hit_perfect.wav",
+    "frames": 25920,
+    "peak_pcm": 10018,
+    "passed": true
+  },
+  {
+    "file": "life_continue.wav",
+    "frames": 32640,
+    "peak_pcm": 8900,
+    "passed": true
+  },
+  {
+    "file": "miss.wav",
+    "frames": 13440,
+    "peak_pcm": 5761,
+    "passed": true
+  },
+  {
+    "file": "number_tick.wav",
+    "frames": 2784,
+    "peak_pcm": 1493,
+    "passed": true
+  },
+  {
+    "file": "rank_up.wav",
+    "frames": 64800,
+    "peak_pcm": 11498,
+    "passed": true
+  },
+  {
+    "file": "rolling_miss.wav",
+    "frames": 15360,
+    "peak_pcm": 4452,
+    "passed": true
+  },
+  {
+    "file": "rolling_success.wav",
+    "frames": 38400,
+    "peak_pcm": 9830,
+    "passed": true
+  },
+  {
+    "file": "rolling_tick.wav",
+    "frames": 2544,
+    "peak_pcm": 1047,
+    "passed": true
+  },
+  {
+    "file": "slow_enter.wav",
+    "frames": 19200,
+    "peak_pcm": 6893,
+    "passed": true
+  },
+  {
+    "file": "stop_tap.wav",
+    "frames": 4320,
+    "peak_pcm": 5868,
+    "passed": true
+  },
+  {
+    "file": "ui_tap.wav",
+    "frames": 3600,
+    "peak_pcm": 3627,
+    "passed": true
+  },
+  {
+    "file": "preview_sequence.wav",
+    "frames": 748800,
+    "peak_pcm": 12139,
+    "passed": true
+  }
+]
