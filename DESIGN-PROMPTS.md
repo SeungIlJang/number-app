@@ -33,11 +33,13 @@ lens flare, low contrast, muddy colors, realistic human faces.
 
 ---
 
-## 1. 앱 아이콘 ⚠️ 최우선
+## 1. 앱 아이콘 ✅ 적용 완료
 
-**현재 문제:** `number-app/icon-512.svg` 와 `android/.../mipmap-*` 아이콘이
-**'갤로그의 귀환'(도형 슈팅) 아이콘 그대로**입니다. 숫자 게임과 전혀 안 맞아요.
-스토어 전환율에 직결되니 가장 먼저 교체하세요.
+`python tools/make_icons.py` 로 생성·적용했습니다 (조준링에 멈춘 숫자 7 + 잔상 숫자).
+숫자·색을 바꾸고 다시 돌리면 런처 아이콘·적응형·스플래시가 전부 갱신됩니다.
+**아래 프롬프트는 외부 AI로 더 공들인 아트를 뽑고 싶을 때의 대안입니다.**
+(그 경우 `assets/icon-only.png` · `assets/icon-foreground.png` 를 교체하고
+`npx @capacitor/assets generate` 를 돌리면 됩니다.)
 
 - 산출물: `icon_1024.png` (1024×1024, 모서리 여백 없는 풀블리드)
 - 추가: `icon_foreground.png` (1024×1024, 중앙 66% 안에 요소 배치 · 투명 배경),
@@ -66,10 +68,10 @@ Flat vector mobile game icon style, bold readable silhouette at 48px.
 
 ---
 
-## 2. 구글 플레이 피처 그래픽 (1024×500)
+## 2. 구글 플레이 피처 그래픽 (1024×500) ✅ 생성 완료
 
-- 산출물: `feature_graphic_1024x500.png`
-- 텍스트는 이미지에 넣지 말고 **빈 공간을 왼쪽 40%에 비워서** 생성 → 나중에 한글 타이틀을 얹기
+`images/number/feature_graphic_1024x500.png` — 타이틀까지 포함된 완성본입니다.
+**아래 프롬프트는 외부 AI로 다시 뽑고 싶을 때의 대안입니다.**
 
 ```
 Google Play feature graphic, 1024x500 landscape banner for a number-timing arcade game.
@@ -84,7 +86,7 @@ Negative: text, logo, watermark, characters, photorealism, clutter.
 
 ---
 
-## 3. 랭크 엠블럼 7종 (v2.0 신규)
+## 3. 랭크 엠블럼 7종 (v2.0 신규) ⬅️ 남은 작업
 
 시작 화면 랭크 카드에서 이모지(🥉🥈🥇💎🔷👑🌟) 자리에 쓸 이미지입니다.
 **7장을 한 세트로, 같은 실루엣·같은 조명**으로 뽑아야 승급감이 살아요.
@@ -113,7 +115,7 @@ Negative: text, numbers written out, photorealism, 3D render, drop shadow on bac
 
 ---
 
-## 4. 부스터 아이콘 4종 (v2.0 신규)
+## 4. 부스터 아이콘 4종 (v2.0 신규) ⬅️ 남은 작업
 
 상점 `⚡ 부스터` 탭과 시작 화면 칩에서 쓰는 아이콘입니다.
 
@@ -133,9 +135,10 @@ Negative: text labels, photorealism, 3D render, busy background, watermark.
 
 ---
 
-## 5. 스플래시 / 로딩 화면
+## 5. 스플래시 / 로딩 화면 ✅ 적용 완료
 
-현재 `android/app/src/main/res/drawable*/splash.png` 도 다른 게임 것입니다.
+`tools/make_icons.py` 가 11종(세로·가로 각 density)을 함께 생성합니다.
+아래는 외부 AI로 다시 뽑을 때의 대안 프롬프트입니다.
 
 - 산출물: `splash_portrait_1080x1920.png`, `splash_land_1920x1080.png`
 

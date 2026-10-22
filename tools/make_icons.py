@@ -139,6 +139,51 @@ def _paste_center(canvas, im, W, H):
     return canvas
 
 
+KR_FONT = r'C:\Windows\Fonts\malgunbd.ttf'
+
+
+def feature_graphic(W=1024, H=500):
+    """구글 플레이 피처 그래픽 — 왼쪽 타이틀, 오른쪽 조준 마크 + 숫자 흐름."""
+    S = int(W * 1.1)
+    bg = radial_background(S).convert('RGBA')
+    canvas = Image.new('RGBA', (W, H), NAVY + (255,))
+    canvas.paste(bg, (int(W * 0.46), (H - S) // 2))
+
+    # 오른쪽: 목표를 향해 흘러가는 숫자 수열
+    stream = Image.new('RGBA', (W, H), (0, 0, 0, 0))
+    sd = ImageDraw.Draw(stream)
+    seq = ['3', '6', '9', '12', '15']
+    x = W * 0.50
+    for i, t in enumerate(seq):
+        px = int(H * (0.105 + 0.022 * i))
+        f = font_for(px)
+        bb = sd.textbbox((0, 0), t, font=f)
+        y = int(H * (0.90 - 0.026 * i))
+        sd.text((x, y - (bb[3] - bb[1]) / 2 - bb[1]), t, font=f, fill=CYAN + (34 + i * 20,))
+        x += (bb[2] - bb[0]) + H * 0.058      # 글자 폭을 재서 띄움 (두 자리 숫자 겹침 방지)
+    canvas = add(canvas, stream.filter(ImageFilter.GaussianBlur(H * 0.006)))
+
+    # 오른쪽 끝: 조준링에 멈춘 숫자
+    m = int(H * 0.70)
+    mk = mark(m)
+    canvas.paste(mk, (int(W * 0.785 - m / 2), int(H * 0.40 - m / 2)), mk)
+
+    # 왼쪽: 타이틀 + 한 줄 카피
+    d = ImageDraw.Draw(canvas)
+    tf = ImageFont.truetype(KR_FONT, int(H * 0.168))
+    sf = ImageFont.truetype(KR_FONT, int(H * 0.064))
+    tx, ty = int(W * 0.065), int(H * 0.33)
+    glow = Image.new('RGBA', (W, H), (0, 0, 0, 0))
+    ImageDraw.Draw(glow).text((tx, ty), '멈춰라 숫자', font=tf, fill=CYAN + (170,), anchor='ls')
+    canvas = add(canvas, glow.filter(ImageFilter.GaussianBlur(H * 0.022)))
+    d = ImageDraw.Draw(canvas)
+    d.text((tx, ty), '멈춰라 숫자', font=tf, fill=(255, 255, 255, 255), anchor='ls')
+    d.text((tx, int(H * 0.47)), '규칙을 읽고  목표에서  STOP!', font=sf, fill=(150, 170, 200, 255), anchor='ls')
+    d.text((tx, int(H * 0.62)), '🔗 체인 목표 · 🏅 랭크 승급 · 🌐 전세계 랭킹'.replace('🔗 ', '').replace('🏅 ', '').replace('🌐 ', ''),
+           font=sf, fill=GOLD + (230,), anchor='ls')
+    return canvas.convert('RGB')
+
+
 def save(im, path):
     os.makedirs(os.path.dirname(path), exist_ok=True)
     im.save(path)
@@ -203,6 +248,7 @@ def main():
     save(radial_background(1024).convert('RGBA'), os.path.join(ASSETS, 'icon-background.png'))
     save(icon_full(1024), os.path.join(STORE, 'icon_1024.png'))
     save(splash(1080, 1920), os.path.join(STORE, 'splash_portrait_1080x1920.png'))
+    save(feature_graphic(), os.path.join(STORE, 'feature_graphic_1024x500.png'))
 
     with open(os.path.join(ROOT, 'icon-512.svg'), 'w', encoding='utf-8') as f:
         f.write(SVG)
