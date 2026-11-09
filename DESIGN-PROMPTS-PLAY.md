@@ -180,30 +180,18 @@ Negative: text, numbers, thick heavy shape, photorealism, watermark.
 
 ---
 
-## 4. 🟡 3순위 — 숫자 스프라이트 (변화는 가장 크지만 연결 작업 필요)
+## 4. 🟡 3순위 — 숫자 스프라이트
 
-`digit_0.png` ~ `digit_9.png` (각 **256×352**, 투명)
-
-**이게 들어가면 플레이 화면의 인상이 가장 크게 바뀝니다.** 다만 게임이 숫자 색을
-상황에 따라 바꾸므로(평소 시안 → 과열 주황 → 목표 노랑 → 실패 빨강),
-**흰색~아주 연한 시안 단색**으로 만들어 주세요. 색은 코드에서 입힙니다.
-
-**규격을 꼭 지켜주세요 — 안 지키면 숫자가 들쭉날쭉합니다**
-- 10장 모두 **같은 캔버스(256×352), 같은 베이스라인, 같은 글자 높이**
-- 좌우 여백도 동일하게(1은 가운데 정렬, 폭을 억지로 좁히지 말 것)
-- 글로우가 캔버스 밖으로 잘리지 않게 여유 확보
-
-```
-A set of 10 game numerals 0 1 2 3 4 5 6 7 8 9, one per image, transparent background,
-identical style, identical cap height and baseline across all ten, same canvas size,
-centered horizontally with equal side margins.
-Each numeral is a bold geometric sans-serif glyph made of polished glass with a
-bright white core and a very pale cyan (#dffaff) edge light, thin crisp outline,
-soft outer bloom. Flat front view, no perspective, no shadow on the ground.
-Style: neon arcade game numerals, clean vector-like edges, high contrast.
-Negative: color tint other than pale cyan, text, letters, serif, outline-only,
-3D perspective, drop shadow, uneven sizes between numerals, watermark.
-```
+> ⚠️ **이 항목은 별도 발주서로 분리됐습니다 → [`DESIGN-PROMPTS-DIGITS.md`](DESIGN-PROMPTS-DIGITS.md)**
+>
+> 아래 초안은 **폐기**합니다. 규격이 두 군데 달라 혼선이 생기니 새 문서만 보세요.
+>
+> 바뀐 점:
+> - 캔버스 `256×352` → **`224×320`** (실제 렌더 비율을 측정해서 다시 잡음)
+> - 투명 PNG + 연한 시안 → **검정 배경 위 흰 숫자(흑백) 불투명 PNG**
+>   게임이 색을 매 프레임 바꾸므로 마스크로 쓰고, 색·글로우는 코드가 입힙니다
+> - 베이스라인·글자 높이를 **y=288 / 256 px** 로 수치 고정 + 자가 검수 스크립트 포함
+> - 규격 참고도 `images/number/_brief/digit_metrics.png` 추가
 
 ---
 
