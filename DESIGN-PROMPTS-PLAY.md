@@ -195,19 +195,19 @@ Negative: text, numbers, thick heavy shape, photorealism, watermark.
 
 ---
 
-## 5. 🟢 4순위 — HUD 소품 (이모지 대체, 각 96×96 투명)
+## 5. 🟢 4순위 — HUD 아이콘
 
-지금 `💛 🔥 💰`는 이모지라 기기마다 모양이 다릅니다.
-
-```
-A set of 3 small game HUD icons, one consistent style, transparent background,
-readable at 20px:
-1) Life  - a glowing golden heart (#ffd34d), simple and bold, soft bloom
-2) Combo - a stylized flame in gold-to-orange gradient, sharp clean silhouette
-3) Coin  - a gold coin seen flat on, with a thin rim and a small star sparkle
-Style: neon arcade game UI icon, clean vector-like edges, bold silhouette.
-Negative: text, numbers, busy detail, photorealism, watermark.
-```
+> ⚠️ **이 항목은 별도 발주서로 분리됐습니다 → [`DESIGN-PROMPTS-ICONS.md`](DESIGN-PROMPTS-ICONS.md)**
+>
+> 아래 초안은 **폐기**합니다. 규격이 두 군데 달라 혼선이 생기니 새 문서만 보세요.
+>
+> 바뀐 점:
+> - 3종(생명·콤보·코인) → **8종** (트로피·일일챌린지·상점·방법·목표 추가)
+>   게임 전체 이모지 48종의 노출 빈도를 세서 가장 오래 보이는 것들을 골랐습니다
+> - "readable at 20px" → **실측 10.5~16px**. 96px 캔버스가 16%로 줄어든다는 뜻이라
+>   **선 굵기 하한 8px**을 수치로 못 박고, 16px 미리보기 납품을 필수로 했습니다
+> - 어두운 배경(`#0a0e1a`) 위에 올라가므로 **어두운 외곽선 금지** 조항 추가
+> - 규격 참고도 `images/number/_brief/icon_metrics.png` 추가
 
 ---
 
