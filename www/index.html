@@ -17,7 +17,7 @@
   var KEY='ota_'+GAME;
   var done=false;
   function render(html){ try{ document.open(); document.write(html); document.close(); }catch(e){ location.replace('game.html'); } }
-  function fallback(){ var c=null; try{ c=localStorage.getItem(KEY); }catch(e){} if(c){ render(c); } else { location.replace('game.html'); } }
+  function fallback(){ var c=null; try{ c=localStorage.getItem(KEY); }catch(e){} if(c){ window.__OTA_LOCAL=true; render(c); } else { location.replace('game.html'); } }
   var ctrl = window.AbortController ? new AbortController() : null;
   var to = setTimeout(function(){ if(done)return; done=true; if(ctrl){try{ctrl.abort();}catch(e){}} fallback(); }, 5000);
   try{
