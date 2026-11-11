@@ -211,6 +211,16 @@ Negative: text, numbers, thick heavy shape, photorealism, watermark.
 
 ---
 
+## 5-2. 🟢 5순위 — 라운드 배너 아이콘
+
+> 별도 발주서 → [`DESIGN-PROMPTS-BANNER.md`](DESIGN-PROMPTS-BANNER.md)
+>
+> 라운드 시작 배너의 이모지 6종(`⚡ 🌟 📈 ✖️ 🔢 ❌`). 4순위와 같은 규격(96×96 투명 full-color)이고
+> 표시 크기만 28~34px로 큽니다. 핵심은 **이미 들어간 HUD 아이콘 8종과 한 가족으로 보이는 것**,
+> 그리고 **곱하기(✖️)와 실패(❌)를 확실히 구분하는 것**입니다.
+
+---
+
 ## 6. 납품 체크리스트
 
 - [ ] 1080×1920 배경 3종 — **세로 32~66% 구간이 어둡고 비어 있는지 꼭 확인**
