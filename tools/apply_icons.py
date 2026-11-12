@@ -16,7 +16,9 @@ SRC = os.path.join(GAME, 'images', 'number', 'neon-v3')
 OUTS = [os.path.join(GAME, 'games', 'img', 'number', 'ui'),
         os.path.join(ROOT, 'www', 'img', 'number', 'ui')]
 
-NAMES = ['life', 'combo', 'coin', 'trophy', 'daily', 'shop', 'help', 'target']
+NAMES = ['life', 'combo', 'coin', 'trophy', 'daily', 'shop', 'help', 'target',
+         # 5순위 — 라운드 배너
+         'roll', 'golden', 'stepup', 'mul', 'choice', 'fail']
 CV, SAFE_LO, SAFE_HI = 96, 8, 88
 LONG_LO, LONG_HI = 72, 80      # 광학 크기: 경계상자 긴 변
 QUALITY = 92
